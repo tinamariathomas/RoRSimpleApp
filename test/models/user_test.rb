@@ -19,4 +19,11 @@ class UserTest < ActiveSupport::TestCase
   test "should be invalid user if email is missing" do
     assert_not @invalid_user_email_missing.valid?
   end
+
+  test "user name should not be too long" do
+    @valid_user.name="xy"*50
+    assert_not @valid_user.valid?
+
+  end
+
 end
