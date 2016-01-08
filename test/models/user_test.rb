@@ -3,9 +3,9 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
 
   def setup
-    @valid_user = User.new(name: "Luna Lovegood", email: "abc@gmail.com")
-    @invalid_user_email_missing = User.new(name: "Luna Lovegood")
-    @invalid_user_name_missing = User.new(email: "abc@gmail.com")
+    @valid_user = User.new(name: "Luna Lovegood", email: "abc@gmail.com", password: "foobar", password_confirmation: "foobar" )
+    @invalid_user_email_missing = User.new(name: "Luna Lovegood", password: "foobar", password_confirmation: "foobar")
+    @invalid_user_name_missing = User.new(email: "abc@gmail.com", password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be a valid user" do
