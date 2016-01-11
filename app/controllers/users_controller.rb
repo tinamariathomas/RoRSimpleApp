@@ -23,6 +23,6 @@ class UsersController < ApplicationController
     params[:user].permit(:name,:email,:password,:password_confirmation)
   end
   def delete
-    
+
   end
 end
