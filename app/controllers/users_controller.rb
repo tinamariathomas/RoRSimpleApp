@@ -23,7 +23,4 @@ class UsersController < ApplicationController
   def user_params
     params[:user].permit(:name,:email,:password,:password_confirmation)
   end
-  def delete
-
-  end
 end
