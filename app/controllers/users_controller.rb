@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    debugger
+    # debugger
   end
 
   def create
@@ -21,5 +21,8 @@ class UsersController < ApplicationController
   private
   def user_params
     params[:user].permit(:name,:email,:password,:password_confirmation)
+  end
+  def delete
+    
   end
 end
